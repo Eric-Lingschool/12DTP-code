@@ -9,6 +9,10 @@ def home():
     return render_template("home.html", title = "Home")
 
 
+@app.route("/pizza/<float:id>")
+def pizza(id):
+    return render_template("pizza.html", id=id)
+
 
 
 if __name__ == "__main__":
