@@ -1,1 +1,0 @@
-using voice recog combined with py html and sql, create a program that recognises how many words are spoken an amount of time in a segment of video/audio.

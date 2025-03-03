@@ -14,14 +14,14 @@ def pizza(id):
     return render_template("pizza.html", id=id)
 
 
-@app.route("/all_pizza")
-def all_pizza():
-    conn = sqlite3.connect("pizza.db")
+@app.route('/all_pizzas')
+def all_pizzas():
+    conn = sqlite3.connect('pizza.db')
     cur = conn.cursor()
-    cur.execute("SELECT * FROM Pizza")
+    cur.execute('SELECT * FROM Pizza')
     pizzas = cur.fetchall()
     conn.close()
-    return render_template("all_pizza.html", pizzas = pizzas)
+    return render_template('all_pizzas.html', pizzas = pizzas)
 
 
 if __name__ == "__main__":
