@@ -9,7 +9,7 @@ def home():
     return render_template("home.html", title = "Home")
 
 
-@app.route("/pizza/<float:id>")
+@app.route("/pizza/<int:id>")
 def pizza(id):
     return render_template("pizza.html", id=id)
 
